@@ -1,4 +1,27 @@
 form {
   display: flex;
   justify-content: center;
+  width: 70%;
+  padding: 5% 15% 3% 15%;
+}
+
+input {
+  /* Input UI styling */
+  width: 100%;
+  height: 2em; /* 2cem */
+  border: 2px rgba(0, 0, 0, 0.25) solid;
+  border-radius: 50px;
+  padding: 5px 0px 5px 22px;
+
+  /* Text styling */
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Media Query for mobile */
+@media (min-width: 280px) and (max-width: 768) {
+  form {
+    width: 100%;
+    padding: 0px;
+  }
 }
