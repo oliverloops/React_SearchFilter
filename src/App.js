@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GiMaterialsScience } from "react-icons/gi";
 import "./App.css";
 //UI components
@@ -18,15 +18,44 @@ const Footer = () => (
 );
 
 const App = () => {
+  const [storedItems, setStoredItems] = useState([]);
+
+  const getField = (e) => {
+    console.log(e.target.value.toLowerCase());
+  };
+
+  //API KEY: tJXFaU9v7qQ4aQgAbMna0qLLDxinIbjUesY3oULu
+
+  // HTTP Request to NASA API
+  async function getData() {
+    await fetch(
+      "https://api.nasa.gov/techtransfer/patent/?engine&api_key=tJXFaU9v7qQ4aQgAbMna0qLLDxinIbjUesY3oULu"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setStoredItems((elems) => [...elems, data.results.slice(0, 10)]);
+      });
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.log(storedItems);
+
   return (
     <>
       <Header />
       <main>
-        <SearchFilter />
+        <SearchFilter getField={getField} />
         <div className="cards-container">
-          <Card />
-          <Card />
-          <Card />
+          {storedItems.length === 0 ? (
+            <span>Loading...</span>
+          ) : (
+            storedItems.map((elem, key) => {
+              <Card key={key} title={elem} desc={"A desc..."} />;
+            })
+          )}
         </div>
       </main>
       <Footer />

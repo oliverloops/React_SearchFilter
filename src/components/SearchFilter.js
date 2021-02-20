@@ -1,10 +1,6 @@
 import { IoMdSearch } from "react-icons/io";
 
-const SearchFilter = ({ props }) => {
-  const getField = (e) => {
-    console.log(e.target.value);
-  };
-
+const SearchFilter = ({ props, getField }) => {
   return (
     <div className="search-container">
       <form>
