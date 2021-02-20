@@ -8,39 +8,52 @@ form {
   display: flex;
   justify-content: center;
   width: 70%;
-  padding: 4px;
-  border: 2px rgba(0, 0, 0, 0.25) solid;
+  padding: 3px 2px 3px 2px;
+  border: 1px rgb(218, 221, 225) solid;
   border-radius: 50px;
+}
+
+form:hover {
+  border: none;
+  transition: all 0.2s linear;
+  -webkit-box-shadow: 0px 4px 24px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 24px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 24px -17px rgba(0, 0, 0, 0.75);
 }
 
 input {
   /* Input UI styling */
   width: 88%;
   height: 2em; /* 2cem */
-  padding: 5px 0px 5px 22px;
+  padding: 5px 0px 5px 15px;
   border: none;
   outline: none;
 
   /* Text styling */
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
 }
 
+::placeholder {
+  color: rgb(188, 188, 188);
+}
+
 .search-icon {
-  color: rgb(144, 151, 157);
+  padding: 10px 0 10px 0;
+  color: rgb(151, 167, 153);
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
   width: 70%;
-  padding: 5% 15% 5% 15%;
+  padding: 0% 15% 5% 15%;
 }
 
 .card-container {
   display: flex;
   flex-direction: row;
-  padding-top: 5%;
+  padding: 5% 0 12px 0;
   border-bottom: 1px rgba(0, 0, 0, 0.35) solid;
 }
 
@@ -48,6 +61,7 @@ input {
   width: 100px;
   height: 100px;
   border: 1px #000 solid;
+  border-radius: 14px;
 }
 
 /* Media Query for mobile */

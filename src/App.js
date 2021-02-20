@@ -4,6 +4,14 @@ import "./App.css";
 import SearchFilter from "./components/SearchFilter";
 import Card from "./components/Card";
 
+const Header = () => <header></header>;
+
+const Footer = () => (
+  <footer>
+    <small>The Science Filter ©2021</small>
+  </footer>
+);
+
 const App = () => {
   return (
     <main>

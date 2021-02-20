@@ -1,4 +1,4 @@
-import { GrSearch } from "react-icons/gr";
+import { IoMdSearch } from "react-icons/io";
 
 const SearchFilter = ({ props }) => {
   const getField = (e) => {
@@ -8,7 +8,7 @@ const SearchFilter = ({ props }) => {
   return (
     <div className="search-container">
       <form>
-        <GrSearch className="search-icon" size={20} />
+        <IoMdSearch className="search-icon" size={20} />
         <input
           type="text"
           placeholder="Search for science"
