@@ -1,22 +1,33 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 8%;
+}
+
 form {
   display: flex;
   justify-content: center;
   width: 70%;
-  padding: 5% 15% 3% 15%;
+  padding: 4px;
+  border: 2px rgba(0, 0, 0, 0.25) solid;
+  border-radius: 50px;
 }
 
 input {
   /* Input UI styling */
-  width: 100%;
+  width: 88%;
   height: 2em; /* 2cem */
-  border: 2px rgba(0, 0, 0, 0.25) solid;
-  border-radius: 50px;
   padding: 5px 0px 5px 22px;
+  border: none;
   outline: none;
 
   /* Text styling */
   font-size: 14px;
   font-weight: 400;
+}
+
+.search-icon {
+  color: rgb(144, 151, 157);
 }
 
 .cards-container {
