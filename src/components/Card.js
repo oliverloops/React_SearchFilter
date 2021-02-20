@@ -6,7 +6,7 @@ const Card = () => (
     <div>
       <img className="img-slug" src={logo} alt="Article Image" />
     </div>
-    <div>
+    <div className="text-content">
       <h3>Title</h3>
       <p>This is a description...</p>
     </div>
