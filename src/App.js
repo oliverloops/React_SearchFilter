@@ -8,7 +8,11 @@ const App = () => {
   return (
     <main>
       <SearchFilter />
-      <Card />
+      <div className="cards-container">
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </main>
   );
 };

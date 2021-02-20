@@ -12,10 +12,31 @@ input {
   border: 2px rgba(0, 0, 0, 0.25) solid;
   border-radius: 50px;
   padding: 5px 0px 5px 22px;
+  outline: none;
 
   /* Text styling */
   font-size: 14px;
   font-weight: 400;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 5% 15% 5% 15%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+  border-bottom: 1px rgba(0, 0, 0, 0.35) solid;
+}
+
+.img-slug {
+  width: 100px;
+  height: 100px;
+  border: 1px #000 solid;
 }
 
 /* Media Query for mobile */

@@ -1,12 +1,10 @@
 import React from "react";
-import logo from "../../public/logo192.png";
-
-console.log(logo);
+import logo from "../logo192.png";
 
 const Card = () => (
-  <div>
+  <div className="card-container">
     <div>
-      <img src={logo} alt="Article Image" />
+      <img className="img-slug" src={logo} alt="Article Image" />
     </div>
     <div>
       <h3>Title</h3>
