@@ -33,9 +33,14 @@ const App = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setStoredItems((elems) => [...elems, data.results.slice(0, 10)]);
+        setStoredItems([data.results.slice(0, 10)]);
       });
   };
+
+  //Filter items function
+  const filtered = storedItems
+    .map((items) => items.map((item) => item[1]))
+    .filter((x) => console.log(x));
 
   useEffect(() => {
     getData();
