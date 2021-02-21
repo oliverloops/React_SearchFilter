@@ -29,7 +29,7 @@ const App = () => {
   // HTTP Request to NASA API
   const getData = async () => {
     await fetch(
-      "https://api.nasa.gov/techtransfer/patent/?engine&api_key=tJXFaU9v7qQ4aQgAbMna0qLLDxinIbjUesY3oULu"
+      "https://api.nasa.gov/techtransfer/patent/?engine&api_key=YOUR_API_KEY"
     )
       .then((res) => res.json())
       .then((data) => {
