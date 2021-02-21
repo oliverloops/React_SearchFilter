@@ -4,15 +4,17 @@ header {
 }
 
 .search-container {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 2% 9% 2% 9%;
 }
 
 form {
+  position: absolute;
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 60%;
   padding: 3px 2px 3px 2px;
   border: 1px rgb(218, 221, 225) solid;
   border-radius: 50px;
@@ -52,7 +54,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 70%;
-  padding: 3% 15% 5% 15%;
+  padding: 5% 15% 5% 15%;
 }
 
 .card-container {
@@ -82,7 +84,7 @@ footer {
 /* Media Query for mobile */
 @media (min-width: 280px) and (max-width: 768px) {
   form {
-    width: 100%;
+    width: 80%;
   }
 
   input {
@@ -92,7 +94,7 @@ footer {
 
   .cards-container {
     width: 80%;
-    padding: 3% 10% 5% 10%;
+    padding: 15% 10% 5% 10%;
   }
 
   .card-container {
