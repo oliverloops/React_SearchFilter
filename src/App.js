@@ -5,6 +5,7 @@ import "./App.css";
 import SearchFilter from "./components/SearchFilter";
 import Card from "./components/Card";
 
+//Layout sample components
 const Header = () => (
   <header>
     <GiMaterialsScience size={50} />
@@ -13,7 +14,7 @@ const Header = () => (
 
 const Footer = () => (
   <footer>
-    <small>The Science Search Filter ©2021</small>
+    <small>The NASA Patents Filter ©2021</small>
   </footer>
 );
 
