@@ -38,9 +38,9 @@ const App = () => {
   };
 
   //Filter items function
-  const filtered = storedItems
-    .map((items) => items.map((item) => item[1]))
-    .filter((x) => console.log(x));
+  const filtered = storedItems.filter((elem, id) => {
+    return elem[id][1].includes(filteredItems);
+  });
 
   useEffect(() => {
     getData();
@@ -52,7 +52,7 @@ const App = () => {
       <main>
         <SearchFilter getField={getField} />
         <div className="cards-container">
-          {storedItems.map((elem) =>
+          {filtered.map((elem) =>
             elem.map((item, key) => (
               <Card key={key} image={item[10]} title={item[1]} desc={item[3]} />
             ))

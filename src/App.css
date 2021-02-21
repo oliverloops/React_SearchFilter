@@ -65,8 +65,7 @@ input {
 .img-slug {
   width: 90px;
   height: 90px;
-  border: 1px #000 solid;
-  border-radius: 14px;
+  border-radius: 18px;
 }
 
 .text-content {
