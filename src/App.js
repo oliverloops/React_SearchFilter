@@ -22,7 +22,6 @@ const App = () => {
   const [filteredItems, setFilteredItems] = useState("");
 
   const getField = (e) => {
-    console.log(e.target.value.toLowerCase());
     setFilteredItems(e.target.value.toLowerCase());
   };
 
@@ -38,8 +37,10 @@ const App = () => {
   };
 
   //Filter items function
-  const filtered = storedItems.filter((elem, id) => {
-    return elem[id][1].includes(filteredItems);
+  const filtered = storedItems.map((elem) => {
+    return elem.filter((items) =>
+      items[1].toLowerCase().includes(filteredItems)
+    );
   });
 
   useEffect(() => {
