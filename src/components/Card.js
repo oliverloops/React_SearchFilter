@@ -1,17 +1,14 @@
 import React from "react";
-import logo from "../logo192.png";
 
-const Card = ({ title, desc }) => {
-  console.log(title);
-
+const Card = ({ image, title, desc }) => {
   return (
     <div className="card-container">
       <div>
-        <img className="img-slug" src={logo} alt="Article Image" />
+        <img className="img-slug" src={image} alt="Article Image" />
       </div>
       <div className="text-content">
-        <h3>{title}</h3>
-        <p>{desc}</p>
+        <h3>{title.slice(0, 31)}</h3>
+        <p>{desc.slice(0, 60).concat("...")}</p>
       </div>
     </div>
   );

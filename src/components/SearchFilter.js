@@ -7,7 +7,7 @@ const SearchFilter = ({ props, getField }) => {
         <IoMdSearch className="search-icon" size={20} />
         <input
           type="text"
-          placeholder="Search for science"
+          placeholder="Search for nasa patents"
           value={props}
           onChange={(e) => getField(e)}
         />

@@ -19,15 +19,15 @@ const Footer = () => (
 
 const App = () => {
   const [storedItems, setStoredItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState("");
 
   const getField = (e) => {
     console.log(e.target.value.toLowerCase());
+    setFilteredItems(e.target.value.toLowerCase());
   };
 
-  //API KEY: tJXFaU9v7qQ4aQgAbMna0qLLDxinIbjUesY3oULu
-
   // HTTP Request to NASA API
-  async function getData() {
+  const getData = async () => {
     await fetch(
       "https://api.nasa.gov/techtransfer/patent/?engine&api_key=tJXFaU9v7qQ4aQgAbMna0qLLDxinIbjUesY3oULu"
     )
@@ -35,13 +35,11 @@ const App = () => {
       .then((data) => {
         setStoredItems((elems) => [...elems, data.results.slice(0, 10)]);
       });
-  }
+  };
 
   useEffect(() => {
     getData();
   }, []);
-
-  console.log(storedItems);
 
   return (
     <>
@@ -49,12 +47,10 @@ const App = () => {
       <main>
         <SearchFilter getField={getField} />
         <div className="cards-container">
-          {storedItems.length === 0 ? (
-            <span>Loading...</span>
-          ) : (
-            storedItems.map((elem, key) => {
-              <Card key={key} title={elem} desc={"A desc..."} />;
-            })
+          {storedItems.map((elem) =>
+            elem.map((item, key) => (
+              <Card key={key} image={item[10]} title={item[1]} desc={item[3]} />
+            ))
           )}
         </div>
       </main>
